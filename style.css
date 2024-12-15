@@ -10,13 +10,14 @@ body {
     background-color: #eaf6fc;
     color: #333;
   }
+
   
   /* Navigation bar*/
   .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 20px;
+    padding: 30px 30px 20px 20px;
     background-color: #ffffff;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     margin-top: 20px;
@@ -34,6 +35,12 @@ body {
     list-style: none;
     margin: 0;
     padding: 0;
+  }
+
+  .menu-toggle {
+    display: none; /* Hide by default */
+    font-size: 30px;
+    cursor: pointer;
   }
   
   .navbar ul li {
@@ -82,7 +89,6 @@ body {
 .navbar ul li:hover .dropdown-menu {
   display: block;
 }
-  
   .navbar .cta {
     background-color: #5a47d9;
     color: white;
@@ -92,6 +98,7 @@ body {
     text-decoration: none;
     font-size: 14px;
     cursor: pointer;
+    margin-left: 15px;
   }
   
   .navbar .cta:hover {
@@ -112,13 +119,13 @@ body {
   }
   
   .hero-text h1 {
-    font-size: 36px;
+    font-size: 60px;
     margin: 0 0 20px;
   }
   
   .hero-text p {
-    font-size: 16px;
-    color: #555;
+    font-size: 20px;
+    color: #828ea6;
     margin: 0 0 20px;
   }
   
@@ -132,8 +139,8 @@ body {
     color: white;
     padding: 12px 24px;
     border: none;
-    border-radius: 4px;
-    font-size: 14px;
+    border-radius: 25px;
+    font-size: 17px;
     margin-right: 10px;
     text-decoration: none;
   }
@@ -147,7 +154,7 @@ body {
     align-items: center;
     text-decoration: none;
     color: #5a47d9;
-    font-size: 14px;
+    font-size: 17px;
   }
   
   .hero-buttons .btn-secondary img {
@@ -168,43 +175,104 @@ body {
   /* portfolio Section (Software Busineses) */
   .portfolio {
     text-align: center;
-    padding: 50px;
+    padding: 60px;
     background-color:#f5f6f8;
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
   }
   
   .portfolio p {
-    margin: 10px 0;
-    font-size: 14px;
+    margin:  0;
+    margin-bottom: 20px;
+    font-size: 17px;
+    font-weight: 400;
     color: #555;
   }
   
   .portfolio .brands {
     display: flex;
     justify-content: center;
-    gap: 100px;
+    gap: 50px;
     margin-top: 10px;
+    width: fit-content;
+    padding: 10px;
   }
   
   .portfolio .brands img {
-    width: 100px;
+    width: fit-content;
   }
+
+  /* animations in brands images */
+  .brands a {
+    display: inline-block;
+    overflow: hidden;
+    border-radius: 8px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .brands img {
+    width: 300px;
+    transition: transform 0.5s ease;
+  }
+  
+  .brands a:hover {
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); 
+  }
+  
+  .brands a:hover img {
+    transform: scale(2);
+  }
+  
 
   /* Automated portfolio tracking  */
   .portfolio-tracking{
     background-color:#fafbff; 
+    padding: 70px;
   }
   .track{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     padding: 50px;
   }
 
+  .track .text h1{
+    font-size: 50px;
+    margin: 0;
+  }
+
+  .track .text p{
+    font-size: 15px;
+    margin-top: 20px;
+  }
+
+  .tracking-quote {
+    position: relative;
+}
+
+.tracking-quote-inner {
+    padding: 2rem;
+    width: 425px;
+    background-color: #cfcfcf;
+    border-radius: 20px;
+}
+
+.quote-name {
+    margin-top: 1rem;
+}
+
+.tracking-quote img, .quote-img {
+    position: absolute;
+    top: -1.25rem;
+    left: 2.25rem;
+}
+
   .card-container {
     display: flex;
+    justify-content: center;
     gap: 20px;
     padding: 20px;
+    /* width: ; */
     
   }
 
@@ -214,7 +282,7 @@ body {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 20px;
     text-align: center;
-    width: 300px;
+    width: 400px;
 }
 
 .icon {
@@ -249,7 +317,7 @@ p {
   align-items: center;
   max-width: 1200px;
   margin: 50px auto;
-  padding: 20px;
+  padding: 1px;
   gap: 30px;
 }
 
@@ -265,7 +333,7 @@ p {
 }
 
 .transaction-left h1 {
-  font-size: 2.5rem;
+  font-size: 3.5rem;
   font-weight: bold;
   margin-bottom: 20px;
   color: #111;
@@ -277,22 +345,31 @@ p {
   margin-bottom: 30px;
 }
 
+.quote{
+    position: relative;
+}
 .transaction-Quot {
-  background-color: #f5f5f5;
+  background-color: #eaebed;
   padding: 20px;
-  border-left: 5px solid #4b4bec;
-  border-radius: 10px;
+  border-radius: 25px;
   font-size: 1rem;
 }
 
 .transaction-Quot p {
   margin-bottom: 10px;
 }
+.quote .quot-image img{
+    position: absolute;
+    top: -1.75rem;
+    left: 2.25rem;
+}
 
 .transaction-Quot p:last-child {
   font-style: italic;
   font-size: 0.9rem;
 }
+
+
 
 /* Right Content */
 .transaction-right {
@@ -322,7 +399,7 @@ p {
 /* Track your payments page*/
 .save {
   background-color: #f8faff;
-  padding: 50px 20px;
+  padding: 100px 20px;
   display: flex;
   justify-content: center;
 }
@@ -332,7 +409,7 @@ p {
   justify-content: space-between;
   align-items: center;
   max-width: 1200px;
-  gap: 50px;
+  gap: 9rem;
 }
 
 /* Payment Cards Layout */
@@ -409,10 +486,99 @@ p {
 
 
 /* featurebox baki xa css  */
-.features{
-    background-color: #c9e7f2;
-    padding: 20px 20px 20px 20px;
-}
+/* Section Styling */
+.features-section {
+    background-color: #D5F4FC;
+    padding: 80px 100px;
+    text-align: center;
+  }
+  
+  .features-header h1 {
+    font-size: 40px;
+    color: #000; 
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  
+  .features-header p {
+    font-size: 18px;
+    color: #555;
+    max-width: 600px;
+    margin: 0 auto 50px;
+    line-height: 1.8; 
+  }
+  
+  /* Features Grid */
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 Columns */
+    gap: 30px;
+    justify-content: space-between;
+    padding: 30px;
+  }
+  
+  .feature-card {
+    background-color: #fff; 
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    min-width: 300px;
+  }
+  
+  /* Icon Styling */
+
+  .feature-card .feature-card-icon-top {
+    width: 30px;
+    height: 10px;
+    margin-bottom: 4px;
+  }
+  .feature-card .feature-card-icon-bottom {
+    width: 50px;
+    height: 40px;
+    margin-bottom: 15px;
+  }
+  
+  /* Headings in Cards */
+  .feature-card h3 {
+    font-size: 18px;
+    color: #000; 
+    margin-bottom: 10px;
+    font-weight: 600;
+    line-height: 1.5;
+  }
+  
+  /* Paragraphs in Cards */
+  .feature-card p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.7;
+  }
+  
+  /* Styling for Two Specific Cards in a Column */
+  .column-card {
+    grid-column: span 2; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+    width: 400px;
+    min-width: 300px;
+  }
+  
+  .column-card h3 {
+    background-color: #fff; /* White background */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-size: 18px;
+    font-weight: 600;
+    color: #000;
+    line-height: 1.5;
+  }
 
 /* Testimonials page */
 .testimonials {
@@ -423,13 +589,13 @@ p {
 }
 
 .section-title {
-  font-size: 2.5rem;
+  font-size: 4rem;
   font-weight: bold;
   margin-bottom: 10px;
 }
 
 .section-description {
-  font-size: 0.8rem;
+  font-size: 1rem;
   color: #777;
   margin-bottom: 0px;
 }
@@ -454,7 +620,7 @@ p {
   background: #fff;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 20px;
+  padding: 50px;
 }
 
 .testimonial-text {
@@ -488,7 +654,7 @@ p {
 .testimonial-image img {
   width: 150px;
   height: 150px;
-  object-fit: cover;
+  object-fit: contain;
   border-radius: 8px;
 }
 
@@ -501,7 +667,7 @@ p {
   background-color: #2b2e83;
   color: white;
   padding: 20px;
-  gap: 200px;
+  gap: 100px;
 }
 
 .users  p{
@@ -513,6 +679,13 @@ p {
   padding: 0px 20px;
   gap: 30px;
 }
+.users .line {
+    width: 5px;
+    height: 100%; 
+    background-color: rgb(15, 15, 15); 
+    align-self: stretch; 
+    margin: 0; 
+  }
 .users ul {
   display: flex;
   list-style: none;
@@ -611,6 +784,27 @@ p {
   text-decoration: underline;
 }
 
+.blog-image a {
+    display: inline-block;
+    overflow: hidden;
+    border-radius: 8px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .blog-image img {
+    width: 300px;
+    transition: transform 0.5s ease;
+  }
+  
+  .blog-image a:hover {
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); 
+  }
+  
+  .blog-image a:hover img {
+    transform: scale(2);
+  }
+
 
 
 /* frequently asked questions section */
@@ -635,15 +829,20 @@ h1 {
   display: flex;
   flex-direction: column;
   gap: 15px;
+  justify-content: space-between;
 }
 
 .faq-item {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
   background: #fff;
   border: 1px solid #ddd;
   border-radius: 8px;
   padding: 15px 20px;
   cursor: pointer;
   transition: all 0.3s ease;
+
 }
 
 .faq-item:hover {
@@ -659,6 +858,7 @@ h1 {
   justify-content: space-between;
   align-items: center;
   font-size: 1rem;
+  width: 100%;
 }
 
 .faq-answer {
@@ -668,9 +868,11 @@ h1 {
   display: none;
 }
 
-.icon {
-  font-size: 1.2rem;
-  color: #007BFF;
+/* Faq icon */
+.iicon {
+  font-size: 1.5rem;
+  color: #0f0f0f;
+  margin-left: auto;
 }
 
 .faq-contact {
@@ -788,7 +990,7 @@ h1 {
   .footer-column ul li a:hover {
     color: #6a6aff;
   }
-  
+
   .social-icons a {
     margin-right: 10px;
     text-decoration: none;
@@ -839,9 +1041,27 @@ h1 {
 
 @media (max-width: 1024px) {
   /* For tablets and smaller desktops */
+  .navbar {
+    padding: 20px 10px;  
+  }
+
+  .navbar .logo {
+    font-size: 24px; /* Reduce logo size */
+  }
+
   .navbar ul {
-    flex-direction: column;
-    align-items: center;
+    display: block; /* Stack the nav items vertically */
+    width: 100%;
+    text-align: center; 
+  }
+
+  .navbar ul li {
+    margin: 10px 0;  
+  }
+
+  .navbar .cta {
+    margin-left: 0;
+    margin-top: 10px;
   }
           
   .hero {
@@ -862,12 +1082,34 @@ h1 {
     gap: 20px;
   }
 
+  .portfolio-tracking {
+    padding: 50px;  
+  }
+
+  .track {
+    flex-direction: column; /* Stack text and quote vertically */
+    padding: 30px;
+  }
+
+  .track .text h1 {
+    font-size: 40px;  
+  }
+
+  .track .text p {
+    font-size: 14px;
+  }
+
+  .tracking-quote-inner {
+    width: 350px;  
+  }
+
   .card-container {
-    flex-wrap: wrap;
+    flex-direction: column; /* Stack cards vertically */
+    gap: 30px;
   }
 
   .card {
-    width: 45%;
+    width: 80%; /* Adjust card width */
   }
 
   .save-container {
@@ -879,6 +1121,43 @@ h1 {
   .payment-card {
     width: 90%;
   }
+
+
+  .features-section {
+    padding: 60px 40px; /* Reduce padding */
+}
+
+.features-header h1 {
+    font-size: 32px; /* Smaller heading size */
+}
+
+.features-header p {
+    font-size: 16px; /* Adjust paragraph size */
+    max-width: 500px; /* Reduce max width */
+}
+
+.features-grid {
+    grid-template-columns: repeat(2, 1fr); /* Switch to 2 columns */
+    gap: 20px; /* Smaller gap */
+}
+
+.feature-card {
+    min-width: 250px; /* Adjust card size */
+    padding: 20px; /* Smaller padding */
+}
+
+.feature-card h3 {
+    font-size: 16px; /* Smaller heading */
+}
+
+.feature-card p {
+    font-size: 14px; /* Smaller paragraph */
+}
+
+.column-card {
+    grid-column: span 2; /* Still spans 2 columns */
+    width: auto;
+}
 
   .testimonial-container {
     grid-template-columns: 1fr; /* Switch to single column layout */
@@ -894,7 +1173,7 @@ h1 {
   }
 
   .testimonial-image img {
-    width: 120px; /* Reduce image size */
+    width: 120px;  
     height: 120px;
   }
 
@@ -935,29 +1214,167 @@ h1 {
   }
 
   /* for user rarting Bar */s
+  .users {
+    padding: 15px;  
+    gap: 50px; 
+  }
+
+  .users p {
+    font-size: 0.9em; 
+  }
+
   .users ul {
-    gap: 15px;
+    gap: 15px; 
   }
 
   .users ul li {
+    padding: 15px; 
+  }
+
+  .users ul li h1 {
+    font-size: 1.8em; 
+  }
+
+  .users ul li p {
+    font-size: 0.9em; 
+  }
+
+  .blog-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
+  }
+
+  .blog-section h1 {
+    font-size: 2rem;
+  }
+
+  .blog-card {
     padding: 15px;
   }
 
-  .users .logo {
-    font-size: 1em;
+  .blog-card h2, .blog-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .blog-card .read-more {
+    font-size: 1rem;
+  }
+
+  .faq-grid {
+    grid-template-columns: 1fr; /* Stack FAQ items vertically */
+  }
+
+  .faq-section h1 {
+    font-size: 2rem;  
+  }
+
+  .faq-question {
+    font-size: 0.9rem;  
+  }
+
+  .faq-item {
+    padding: 12px 15px;  
+  }
+
+  .faq-answer {
+    font-size: 0.85rem; / 
+  }
+
+  .faq-contact {
+    padding: 15px;  
+  }
+
+  .contact-card h3 {
+    font-size: 1.2rem;  
+  }
+
+  .contact-card p {
+    font-size: 0.85rem; 
+  }
+
+  .cta-button {
+    padding: 8px 16px;  
+  }
+
+  .getstared {
+    padding: 60px 20px;  
+  }
+
+  .getstared h1 {
+    font-size: 2.2rem;  
+  }
+
+  .getstared-button {
+    padding: 8px 16px;  
+    font-size: 0.9rem;  
+  }
+
+  .footer {
+    padding: 30px 20px;  
+    justify-content: space-around;  
+  }
+
+  .footer-column {
+    flex: 1 1 250px; /* Increase the minimum size of each column */
+  }
+
+  .footer-column h3 {
+    font-size: 18px;  
+  }
+
+  .footer-column ul li a {
+    font-size: 14px;  
+  }
+
+  .newsletter input {
+    width: calc(100% - 80px);  
+  }
+
+  .footer-bottom {
+    font-size: 16px;  
   }
 }
 
 @media (max-width: 768px) {
-  /* For mobile devices */
-  .navbar {
-    flex-direction: column;
-  }
+.navbar {
+    flex-direction: column; /* Stack navbar items vertically */
+    align-items: flex-start; /* Align to the left */
+    padding: 15px 10px;
+    }
 
-  .navbar ul {
-    flex-direction: column;
-    align-items: center;
-  }
+    .navbar .logo {
+    font-size: 20px;  
+    margin-bottom: 20px; 
+    }
+
+    .navbar ul {
+    display: none; /* Initially hide the menu */
+    width: 100%;
+    margin-top: 10px;
+    }
+
+    .menu-toggle {
+        display: block; /* Show hamburger menu on mobile */
+      }
+
+    .navbar ul li {
+    width: 100%;
+    margin: 10px 0;
+    }
+
+    .navbar ul li a {
+    font-size: 18px; /* Make links smaller */ 
+    }
+
+    .navbar .cta {
+    width: 100%; /* Make CTA button full width */
+    margin-left: 0;
+    margin-top: 15px;
+    }
+
+    /* Show the menu when the user clicks on the hamburger menu */
+    .navbar.active ul {
+    display: block;
+    }
 
   .hero {
     flex-direction: column;
@@ -971,19 +1388,51 @@ h1 {
     width: 80px;
   }
 
+  .portfolio-tracking {
+    padding: 30px; 
+  }
+
+  .track {
+    padding: 20px;
+  }
+
+  .track .text h1 {
+    font-size: 30px; 
+  }
+
+  .track .text p {
+    font-size: 13px;
+  }
+
+  .tracking-quote-inner {
+    width: 100%; /* Make quote take full width */
+  }
+
   .card-container {
-    flex-direction: column;
-    gap: 15px;
-    align-items: center;
+    flex-direction: column; /* Stack cards vertically */
+    gap: 20px;
   }
 
   .card {
-    width: 90%;
+    width: 100%; /* Full width for cards */
+    padding: 15px;  
   }
 
-  .footer {
-    flex-direction: column;
-    align-items: center;
+  .icon {
+    width: 40px;
+    height: 40px;  
+  }
+
+  h2 {
+    font-size: 1.2rem;  
+  }
+
+  h3 {
+    font-size: 1rem;  
+  }
+
+  p {
+    font-size: 0.8rem;  
   }
 
   .save-text h1 {
@@ -993,6 +1442,43 @@ h1 {
   .save-text ul li {
     font-size: 0.9rem;
   }
+
+  /* Features */
+  .features-section {
+    padding: 40px 20px; /* Reduce padding for mobile */
+}
+
+.features-header h1 {
+    font-size: 28px; /* Smaller heading size */
+}
+
+.features-header p {
+    font-size: 14px; /* Smaller paragraph size */
+    max-width: 100%; /* Full width for mobile */
+}
+
+.features-grid {
+    grid-template-columns: 1fr; /* Single column layout */
+    gap: 15px; /* Smaller gap */
+}
+
+.feature-card {
+    width: 100%; /* Full width */
+    min-width: unset; /* Remove min-width constraint */
+    padding: 15px; /* Compact padding */
+}
+
+.feature-card h3 {
+    font-size: 14px; /* Smaller heading */
+}
+
+.feature-card p {
+    font-size: 12px; /* Smaller paragraph */
+}
+
+.column-card {
+    width: 100%; /* Full width for mobile */
+}
 
   .testimonial-container {
     grid-template-columns: 1fr;
@@ -1047,14 +1533,156 @@ h1 {
     width: 70%;
     margin-top: 5px;
   }
-  /* for user rating bar */
+
+  
+  .users {
+    flex-direction: column; 
+    padding: 10px; 
+    gap: 50px; 
+  }
+
+  .users p {
+    font-size: 0.85em; 
+  }
+
   .users ul {
-    flex-direction: column;
+    flex-direction: column; 
     gap: 10px;
   }
 
   .users ul li {
-    flex: none;
-    width: 100%;
+    width: 100%; 
+    padding: 15px; 
   }
+
+  .users ul li h1 {
+    font-size: 1.5em; 
+  }
+
+  .users ul li p {
+    font-size: 0.85em; 
+  }
+
+  .users .line {
+    display: none; 
+  }
+
+  /* Blog sectioin */
+  .blog-grid {
+    grid-template-columns: 1fr;  
+  }
+
+  .blog-section h1 {
+    font-size: 1.8rem;
+  }
+
+  .blog-card {
+    padding: 12px;
+  }
+
+  .blog-card h2, .blog-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .blog-card .read-more {
+    font-size: 0.9rem;
+  }
+
+  .blog-card img {
+    height: auto;
+  }
+
+  .faq-grid {
+    grid-template-columns: 1fr; 
+    padding: 10px;
+  }
+
+  .faq-section h1 {
+    font-size: 1.8rem;  
+    margin-bottom: 20px;  
+  }
+
+  .faq-item {
+    padding: 10px 12px; 
+  }
+
+  .faq-answer {
+    font-size: 0.8rem;  
+  }
+
+  .icon {
+    font-size: 1.2rem;  
+  }
+
+  .faq-contact {
+    padding: 12px; 
+  }
+
+  .contact-card h3 {
+    font-size: 1.1rem; 
+  }
+
+  .contact-card p {
+    font-size: 0.8rem; 
+  }
+
+  .cta-button {
+    padding: 8px 15px; 
+    font-size: 0.9rem; 
+  }
+
+  .getstared {
+    padding: 50px 15px; 
+  }
+
+  .getstared h1 {
+    font-size: 1.8rem; 
+  }
+
+  .getstared-button {
+    padding: 8px 15px;
+    font-size: 0.85rem; 
+    width: 100%; 
+  }
+
+  .footer {
+    padding: 20px 15px;
+    flex-direction: column; 
+    align-items: center; 
+  }
+
+  .footer-column {
+    flex: 1 1 100%; 
+    margin-bottom: 20px; 
+  }
+
+  .footer-column h3 {
+    font-size: 20px; 
+  }
+
+  .footer-column ul li a {
+    font-size: 16px;
+  }
+
+  .newsletter {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    margin-top: 20px;
+  }
+
+  .newsletter input {
+    width: 100%; 
+    margin-bottom: 10px;
+  }
+
+  .newsletter button {
+    width: 100%; 
+  }
+
+  .footer-bottom {
+    font-size: 16px; 
+  }
+
 }
+

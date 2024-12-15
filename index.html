@@ -5,10 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Freelance Payments</title>
   <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+
 </head>
 <body>
+    <!-- Navigation bar -->
   <div class="navbar">
     <div class="logo">AR Shakir</div>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
     <ul>
       <li class="dropdown">
         <a href="#">Product <img src="images/dropDownMenu.png" alt="▼"></a>
@@ -21,30 +25,34 @@
       <li class="dropdown">
         <a href="#">Template <img src="images/dropDownMenu.png" alt="▼"></a>
         <ul class="dropdown-menu">
-          <li><a href="#">Product 1</a></li>
-          <li><a href="#">Product 2</a></li>
-          <li><a href="#">Product 3</a></li>
+          <li><a href="#">Template 1</a></li>
+          <li><a href="#">Template 2</a></li>
+          <li><a href="#">Template 3</a></li>
         </ul>
       </li>
       <li><a href="#">Blog</a></li>
       <li><a href="#">Pricing</a></li>
     </ul>
-    <div>
-      <a href="#" class="cta">Sign In</a>
+    <div class="navbar-end">
+      <a >Sign In</a>
       <a href="#" class="cta">Start Free</a>
     </div>
   </div>
 
+  <!--  -->
   <section class="hero">
     <div class="hero-text">
       <h1>Managing freelance payments has never been easier</h1>
       <p>Yet bed any for travelling assistance indulgence unpleasing. Not thoughts all exercise blessing.</p>
-      <div class="hero-buttons">
-        <a href="#" class="btn-primary">Get Started</a>
-        <a href="#" class="btn-secondary"> <img src="images/playbutton.png" alt="Play Icon">See How It Works</a>
+      <div class="hero-buttons"> 
+        <a href="#" class="btn-primary" id="getStartedButton">Get Started</a>
+        <a href="#" class="btn-secondary" id="seeHowItWorksButton">
+          <img src="images/playbutton.png" alt="Play Icon">See How It Works
+        </a>
       </div>
+
       <div>
-        <p>Free Register &nbsp; &#8226; &nbsp; Great Service</p>
+        <p><img src="images/Blue-Radio.png" alt="Blue-Radio"> Free Register &nbsp; &#8226; &nbsp;<img src="images/Blue-Radio.png" alt="Blue-Radio"> Great Service</p>
       </div>
     </div>
     <div class="hero-image">
@@ -52,6 +60,7 @@
     </div>
   </section>
 
+  <!-- Growing software businesses -->
   <div class="portfolio">
     <p>Over 32k+ software businesses growing with AR Shakir.</p>
     <div class="brands">
@@ -61,15 +70,22 @@
       <a href="https://www.oracle.com" target="_blank">
         <img src="images/Oracle.png" alt="Oracle">
       </a>
+      <a href="https://morpheus.com/" target="_blank">
+        <img src="images/Morpheus.png" alt="Morpheus">
+      </a>      
       <a href="https://www.samsung.com" target="_blank">
         <img src="images/Samsung.png" alt="Samsung">
       </a>
       <a href="https://www.monday.com" target="_blank">
         <img src="images/MOnday.png" alt="Monday">
-      </a>
+        </a>
+        <a href="https://segment.com/" target="_blank">
+        <img src="images/Segment.png" alt="Segment">
+        </a>
       <a href="https://www.protonet.com" target="_blank">
         <img src="images/Pronet.png" alt="Protonet">
       </a>
+      
     </div>
   </div>
 
@@ -79,13 +95,19 @@
     <div class="text">
     <h1>Automated</h1>
      <h1>portfolio tracking</h1>
-     <P>Yet bed any for travelling assistance indulgence unpleasing.</P>
-     <p> Not thoughts all exercise blessing. </P>
+     <div class="textSmall">
+     <P>Yet bed any for travelling assistance indulgence unpleasing.<br>
+      Not thoughts all exercise blessing. </P>
      </div>
-     <div class="review">
-      <P>Wise busy past both park when an ye no. Nay<br> likely her length sooner thrown sex lively income.<br> The expense windows adapted sir. Wrong widen.</P>
-      
      </div>
+     <div class="tracking-quote">
+        <div class="tracking-quote-inner">
+            <p>Wise busy past both park when an ye no. Nay likely her length sooner thrown sex lively income.
+                The expense windows adapted sir. Wrong widen.</p>
+            <p class="quote-name"> - Mike Taylor, Web Designer</p>
+        </div>
+        <img src="images/Double-Qutation.png" alt="double-quotation">
+    </div>
   </div>
 
   <div class="card-container">
@@ -111,7 +133,7 @@
 </div>
 
  
-    <!-- Payment track page -->
+    <!-- Track your payment section -->
   <section class="save">
     <div class="save-container">
       <!-- Left Side: Payment Cards -->
@@ -155,9 +177,9 @@
           Party we years to order allow asked of.
         </p>
         <ul>
-          <li>✅ Get Overview at a glance</li>
-          <li>✅ Deposit funds easily, securely</li>
-          <li>✅ Get Live Support</li>
+          <li><img src="images/Yellow-Radio.png" alt="yellow"> Get Overview at a glance</li>
+          <li><img src="images/Yellow-Radio.png" alt="yellow"> Deposit funds easily, securely</li>
+          <li><img src="images/Yellow-Radio.png" alt="yellow"> Get Live Support</li>
         </ul>
       </div>
     </div>
@@ -170,9 +192,14 @@
       <h1>Save money with<br>
         proper transaction</h1>
       <h3 style="color: gray;">We so opinion friends me message as delight.<br> Whole front do of plate heard oh ought. His<br> defective nor convinced residence own.</h3>
-      <div class="transaction-Quot">
+      <div class="quote">
+        <div class="transaction-Quot">
         <p> Wise busy past both park when an ye no. Nay likely her length<br> sooner thrown sex lively income. The expense windows . </p>      
-        <P>- Mike Taylor, Web Designer</P></div>  
+        <P>- Mike Taylor, Web Designer</P></div>
+        <div class="quot-image"> 
+        <img src="images/Double-Qutation.png" alt="img"> 
+        </div>
+    </div>
     </div>
     <div class="transaction-right">
       <img src="images/creditcard.png" alt="creditcard">
@@ -180,18 +207,36 @@
   </div>
 
   
-<!-- Features that blows mind page -->
-  <div class="features">
-    <h1>Features that blows mind</h1>
-    <p>
-      We so opinion friends me message as delight. Whole front do of plate heard<br> oh ought. His defective nor convinced residence own.
-    </p>
-    <div class="featurebox">
-      <img src="images/feature1.png" alt="df">
-      <img src="images/feature2.png" alt="dsf">
-      <img src="images/feature3.png" alt="sdf">
+<!-- Features that Blows Mind Section -->
+<section class="features-section">
+    <div class="features-header">
+      <h1>Features that blows mind</h1>
+      <p>We so opinion friends me message as delight. Whole front do of plate heard oh ought. His defective nor convinced residence own.</p>
     </div>
-  </div>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-card-icon-top" style="background-color: #020202;"></div>
+        <div class="feature-card-icon-bottom" style="background-color: #ff715b;"></div>
+        <h3>Really boy law county she unable her sister</h3>
+        <p>We so opinion friends me messages as delight. Whole front do of plate heard oh ought.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-card-icon-top" style="background-color: #020202; height: 10px; margin-bottom: 5px;"></div>
+        <div class="feature-card-icon-bottom" style="background-color: #475fd9;"></div>
+        <h3>Among sex are leave law built now</h3>
+        <p>We so opinion friends me messages as delight. Whole front do of plate heard oh ought.</p>
+      </div>
+      <div class="column-card">
+      <div class=" row-card">
+        <h3>Merits behind on afraid or warmly</h3>
+      </div>
+      <div class=" row-card">
+        <h3>Believing neglected so so allowance existence</h3>
+      </div>
+    </div>
+    </div>
+  </section>
+  
 
 <!-- Testimonials page -->
   <section class="testimonials">
@@ -232,7 +277,7 @@
           <p class="testimonial-author">- Mike Taylor, Web Designer</p>
         </div>
         <div class="testimonial-image">
-          <img src="images/Testamonial-image2.png" alt="Testimonial Person 2">
+          <img src="images/Testamonial-image1.png" alt="Testimonial Person 2">
         </div>
       </div>
     </div>
@@ -243,7 +288,8 @@
   <div class="users">
     <div><p>We speak with</p>
       <p>our powerfull</p>
-      <p>statistics</div>
+      <p>statistics</p></div>
+        <div class="line" style="background-color: #020202;"></div>
     <ul>
       <li><h1>1M+</h1><p><img src="images/ActiveUsers.png" alt="User Logo">Active Users</p></li>
       <li><h1>30k+</h1><p><img src="images/ReviewStar.png" alt="star">5-Stars Review</p></li>
@@ -293,35 +339,47 @@
     <div class="faq-item expanded">
         <div class="faq-question">
         <p>The expense windows adapted sir. Wrong widen drawn.</p>
-        <span class="icon">+</span>
+        <span class="faq-icon">+</span>
         </div>
-        <div class="faq-answer">
-        <p>Offending belonging promotion provision can be oh consulted ourselves it. Blessing welcomed ladyship she met humoured sir breeding her.</p>
-        </div>
+        <div class="faq-answer" style="display: none;">
+            <p>Offending belonging promotion provision can be oh consulted ourselves it. Blessing welcomed ladyship she met humoured sir breeding her.</p>
+            </div>
     </div>
     <div class="faq-item">
         <div class="faq-question">
         <p>Six curiosity day assurance bed necessary?</p>
-        <span class="icon">+</span>
+        <span class="faq-icon">+</span>
         </div>
+        <div class="faq-answer">
+            <p>Offending belonging promotion provision can be oh consulted ourselves it. Blessing welcomed ladyship she met humoured sir breeding her.</p>
+            </div>
     </div>
     <div class="faq-item">
         <div class="faq-question">
         <p>Produce say the ten moments parties?</p>
-        <span class="icon">+</span>
+        <span class="faq-icon">+</span>
         </div>
+        <div class="faq-answer">
+            <p>Offending belonging promotion provision can be oh consulted ourselves it. Blessing welcomed ladyship she met humoured sir breeding her.</p>
+            </div>
     </div>
     <div class="faq-item">
         <div class="faq-question">
         <p>Simple innate summer fat appear basket his desire joy?</p>
-        <span class="icon">+</span>
+        <span class="faq-icon">+</span>
         </div>
+        <div class="faq-answer">
+            <p>Offending belonging promotion provision can be oh consulted ourselves it. Blessing welcomed ladyship she met humoured sir breeding her.</p>
+            </div>
     </div>
     <div class="faq-item">
         <div class="faq-question">
         <p>Outward clothes promise at gravity do excited?</p>
-        <span class="icon">+</span>
+        <span class="faq-icon">+</span>
         </div>
+        <div class="faq-answer">
+            <p>Offending belonging promotion provision can be oh consulted ourselves it. Blessing welcomed ladyship she met humoured sir breeding her.</p>
+            </div>
     </div>
     </div>
     
